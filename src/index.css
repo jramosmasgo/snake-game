@@ -1,0 +1,34 @@
+:root {
+  background-color: #0d0d0d;
+
+  /* 🎮 Base Colors */
+  --color-background: #0d0d0d;
+  /* Fondo principal */
+  --color-grid: #333333;
+  /* Líneas del grid o bordes suaves */
+
+  /* 🐍 Snake */
+  --color-snake: #00ff00;
+  /* Verde neón */
+
+  /* 🍎 Food */
+  --color-food: #ff0066;
+  /* Rosa fuerte */
+
+  /* ✨ Accents / UI */
+  --color-accent: #00ffff;
+  /* Cian neón */
+  --color-text: #f0f0f0;
+  /* Texto general */
+  --color-shadow: rgba(0, 255, 0, 0.2);
+  /* Glow sutil */
+  --color-pacman: #ffcc00;
+  /* Amarillo vibrante estilo arcade clásico */
+
+  /* 🔠 Typography */
+  --font-retro: 'Press Start 2P', monospace;
+  --font-ui: 'Orbitron', 'Share Tech Mono', monospace;
+
+  /* 🕹️ Speed Settings (opcional para js) */
+  --snake-speed: 200ms;
+}

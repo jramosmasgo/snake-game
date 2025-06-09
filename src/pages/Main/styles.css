@@ -1,0 +1,35 @@
+.main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.main-content {
+    width: 80%;
+}
+
+.header {
+    font-family: "Press Start 2P", system-ui;
+    display: flex;
+    border: 1px solid red;
+    padding: 10px 20px;
+}
+
+.header-title {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.header-title img {
+    height: 100px;
+}
+
+.header-title h1 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    color: var(--color-pacman);
+}
