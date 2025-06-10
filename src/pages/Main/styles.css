@@ -13,7 +13,7 @@
 .header {
     font-family: "Press Start 2P", system-ui;
     display: flex;
-    border: 1px solid red;
+    justify-content: space-between;
     padding: 10px 20px;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .header-title img {
-    height: 100px;
+    height: 80px;
 }
 
 .header-title h1 {
@@ -32,4 +32,17 @@
     font-weight: 400;
     font-size: 2rem;
     color: var(--color-pacman);
+}
+
+.header-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-pacman);
+}
+
+.header-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
 }

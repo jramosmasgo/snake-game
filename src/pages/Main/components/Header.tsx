@@ -7,9 +7,18 @@ const Header: React.FunctionComponent = () => {
             <div className="header-title">
                 <img src={Logo} alt="" />
                 <h1>
-                    Snake Game
+                    SnakeGame
                 </h1>
-
+            </div>
+            <div className="header-menu">
+                <ul>
+                    <li>
+                        Game
+                    </li>
+                    <li>
+                        High Scores
+                    </li>
+                </ul>
             </div>
         </div>
     )
