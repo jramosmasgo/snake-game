@@ -1,0 +1,37 @@
+.board-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.status-content {
+    padding: 20px;
+    margin-left: 20px;
+    font-family: "Press Start 2P", system-ui;
+    color: var(--color-pacman);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.status-content h2 {
+    margin-bottom: 40px;
+}
+
+.status-content-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.status-content-item h3 {
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+.status-content-item span {
+    font-size: 1rem;
+}

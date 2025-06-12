@@ -2,6 +2,8 @@ import React from "react";
 import Board from "./components/Board";
 import { BOARD_SIZE } from "../../constants/gameInitial";
 import { useSnakeGame } from "../../hooks/useSnakeGame";
+import GameStatus from "./components/GameStatus";
+import "./styles.css";
 
 const Game: React.FC = () => {
   const { snake, food, direction, setDirection, gameOver, score } =
@@ -28,12 +30,15 @@ const Game: React.FC = () => {
     };
 
     window.addEventListener("keydown", handleKeyDown);
-
-    // Limpieza al desmontar
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [direction, gameOver, setDirection]);
 
-  return <Board size={BOARD_SIZE} food={food} snake={snake} />;
+  return (
+    <div className="board-content">
+      <Board size={BOARD_SIZE} food={food} snake={snake} />
+      <GameStatus score={score} />
+    </div>
+  );
 };
 
 export default Game;

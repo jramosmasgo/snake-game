@@ -3,6 +3,7 @@ import { BOARD_SIZE, INITIAL_SNAKE } from "../constants/gameInitial";
 import type { Direction, Point } from "../interfaces/game";
 import { getNextHead } from "../utils/directions";
 import { getRandomFood } from "../utils/food";
+import { CrashAudio, EatAudio } from "../config/assets";
 
 export function useSnakeGame() {
   const [snake, setSnake] = useState<Point[]>(INITIAL_SNAKE);
@@ -11,6 +12,8 @@ export function useSnakeGame() {
   const [gameOver, setGameOver] = useState(false);
   const [score, setScore] = useState(0);
   const intervalRef = useRef<number>();
+  const audioEat = new Audio(EatAudio);
+  const audioCrash = new Audio(CrashAudio);
 
   const move = () => {
     const newHead = getNextHead(snake[0], direction);
@@ -24,6 +27,7 @@ export function useSnakeGame() {
     const hitSelf = snake.some((p) => p.x === newHead.x && p.y === newHead.y);
 
     if (hitWall || hitSelf) {
+      audioCrash.play();
       setGameOver(true);
       clearInterval(intervalRef.current);
       return;
@@ -31,8 +35,10 @@ export function useSnakeGame() {
 
     const ateFood = newHead.x === food.x && newHead.y === food.y;
     const newSnake = [newHead, ...snake];
-    if (!ateFood) newSnake.pop();
-    else {
+    if (!ateFood) {
+      newSnake.pop();
+    } else {
+      audioEat.play();
       setFood(getRandomFood(BOARD_SIZE));
       setScore((s) => s + 1);
     }

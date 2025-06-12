@@ -15,7 +15,6 @@ const Board: React.FC<BoardProps> = ({ size, food, snake }) => {
         gridTemplateRows: `repeat(${size},20px)`,
         gridTemplateColumns: `repeat(${size},20px)`,
         border: "2px solid var(--color-accent)",
-        margin: "20px auto",
         width: `${size * 20}px`,
       }}
     >

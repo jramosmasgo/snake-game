@@ -1,11 +1,8 @@
-import './App.css'
-import Main from './pages/Main'
+import HomeTemplate from "./templates/Home";
+import "./App.css";
 
 function App() {
-
-  return (
-    <Main />
-  )
+  return <HomeTemplate />;
 }
 
-export default App
+export default App;
